@@ -1,0 +1,102 @@
+(function($) {  
+
+  $(document).ready(function() {
+    initWishlist();
+    initProductWishlist();
+    initRemoveWishlist();
+  }); 
+
+  function initWishlist() {
+    $('.product-inner .add-to-wishlist').click(function(e) {
+      e.preventDefault();
+      var form = $(this).parent();  
+      var productItem = $(this).parents('.product-inner');
+
+      $.ajax({
+        type: 'POST',
+        url: '/contact',
+        data: form.serialize(),
+        beforeSend: function() {
+          form.html('<div class="loader"><i class="icon-arrows-rotate-anti-dashed"></i></div>');
+        },
+        success: function(data) { 
+         form.html('<a class="btn-added wishlist add-to-wishlist awe-button product-quick-whistlist added" href="/pages/wishlist" data-placement="left" data-toggle="tooltip" title="Go to wishlist"><i class="icon-basic-heart"></i></a>');            
+          $('.tooltip').remove();
+          $('[data-toggle="tooltip"]').tooltip({container: 'body'});
+        },
+        error: function(xhr, text) { 
+          form.html('<a class="wishlist added" href="/pages/wishlist" title="Go to wishlist"><i class="icon-heart"></i></a>');   
+          $('.error-message').text($.parseJSON(xhr.responseText).description);
+          showPopup('.error-popup');
+        }
+      });
+    });
+
+  }window.initWishlist=initWishlist;
+
+
+  function initProductWishlist() {
+    $('.product-single .add-to-wishlist').click(function(e) {
+      e.preventDefault();
+     
+      var form = $(this).parent();
+      $.ajax({
+        type: 'POST',
+        url: '/contact',
+        data: form.serialize(),
+        beforeSend: function() {
+          showPopup('.loading'); 
+        },
+        success: function(data) {
+          hidePopup('.loading');  
+          form.html('<a class="wishlist add-to-wishlist awe-button product-quick-whistlist added" href="/pages/wishlist" title="Go to wishlist"><i class="line wishlist"></i></a>');            
+          var title = $('.product-name').html();
+          var image = $('.product-featured-image').attr('src');
+          $('.product-popup').find('.product-name').html(title);
+          $('.product-popup').find('.product-image img').attr('src', image);
+          $('.product-popup').find('.btn-wishlist').show();
+          $('.product-popup').find('.btn-cart').hide();
+          showPopup('.product-popup');
+
+
+        },
+        error: function(xhr, text) {
+          hidePopup('.loading');    
+          $('.error-message').text($.parseJSON(xhr.responseText).description);
+          showPopup('.error-popup');  
+        }
+      });
+
+    }); 
+  };
+
+  /* Remove Wishlist */
+  function initRemoveWishlist() {
+    $('.btn-remove-wishlist').click(function(e) {
+      e.preventDefault();
+      var row = $(this).parents('tr');
+      var tagID = row.find('.tag-id').val();
+      var form = jQuery('#remove-wishlist-form');
+      form.find("input[name='contact[tags]']").val('x' + tagID);
+      $.ajax({
+        type: 'POST',
+        url: '/contact',
+        data: form.serialize(),
+        beforeSend: function() {
+          showPopup('.loading'); 
+
+        },
+        success: function(data) {
+          row.fadeOut(1000);
+          hidePopup('.loading');  
+        },
+        error: function(xhr, text) {
+          $('.error-message').text($.parseJSON(xhr.responseText).description);
+          showPopup('.error-popup');
+        }
+      });
+    });
+  };
+
+
+})(jQuery);

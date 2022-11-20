@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;600;800&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&family=PT+Serif&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600;700;800&family=Roboto:wght@700&family=Staatliches&display=swap');
+        
+        
+        
+        *, *::before, *::after {box-sizing: border-box;}
+        a {text-decoration: none;color: #000;}
+        html {font-size: 62.5%;}
+        svg {width: 20px;height: 20px;}
+        :root {
+            --smDis: 10px;
+            --mDis: 20px;
+            --lgDis: 30px;
+            --xlDis: 40px;
+            --mainColor1: #2a9d8f;
+            --mainColor2: #e76f51;
+            --subColor1: #DDD;
+            --subColor2: #888;
+            --subColor3: #264653;
+            --font1: 'Merriweather', serif;
+            --font2: 'Open Sans', sans-serif;
+            --fontSize1:4rem; --fontSize2:2.8rem;
+            --fontSize3:2.4rem; --fontSize4: 1.8rem
+        }
+        body, button, input {font-family: var(--font2);
+            font-size: var(--fontSize4);}
+        .padding-all {padding: var(--mDis);}
+        .reset-list {list-style: none;padding: 0;margin: 0;}
+        img, video, iframe {max-width: 100%;}
+        .max-container {max-width: 1140px;margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        body {margin: 0;padding: 0;}
+        .d-none {display: none;}
+
+        .banner-review > div {min-height: 100px;}
+        .banner-truot {background-color: palegreen;}
+        .review {background-color: red;}
+        .banner-tron {background-color: blue;}
+
+        @media screen and (min-width:992px) {
+            .d-lg-block {display: block !important;}
+            .banner-review {display: flex;flex-wrap: wrap;}
+            .review {margin-left: var(--mDis);
+                width: calc((100% - var(--mDis)) / 3)}
+            .banner-truot, .banner-tron {width: calc((100% - var(--mDis)) * 2 / 3)}
+            
+        }
+
+    </style>
+</head>
+<body>
+    <section class="max-container banner-review">
+        <div class="banner-truot">banner tron</div>
+        <div class="review d-none d-lg-block">Phan review</div>
+        <div class="banner-tron">phan nut tron</div>
+    </section>
+</body>
+</html>

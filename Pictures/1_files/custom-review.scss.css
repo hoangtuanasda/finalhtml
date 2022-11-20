@@ -1,0 +1,74 @@
+.template-collection .spr-badge {
+  height: 25px; }
+
+.template-product .spr-icon, .template-collection .spr-icon {
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block; }
+
+.template-product .spr-icon:before, .template-collection .spr-icon:before {
+  font-family: FontAwesome;
+  content: "\f005";
+  padding-right: 9px;
+  color: #ffa200;
+  line-height: auto;
+  font-size: 19px;
+  width: auto;
+  opacity: 1; }
+
+.template-product .tab-content .spr-icon:before, .template-collection .tab-content .spr-icon:before {
+  font-family: FontAwesome;
+  content: "\f005";
+  padding-right: 5px;
+  color: #ffa200;
+  line-height: auto;
+  font-size: 13px;
+  width: auto;
+  opacity: 1; }
+
+.template-product .spr-icon.spr-icon-star-empty:before, .template-collection .spr-icon.spr-icon-star-empty:before {
+  color: #ACACAC;
+  opacity: 1; }
+
+.template-product .spr-header-title, .template-collection .spr-header-title {
+  font-weight: 700;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 25px; }
+
+.template-product .tab-content #haravan-product-reviews, .template-collection .tab-content #haravan-product-reviews {
+  margin-top: 0; }
+
+.template-product .spr-form-input-text, .template-product .spr-form-input-email, .template-product .spr-form-input-textarea, .template-collection .spr-form-input-text, .template-collection .spr-form-input-email, .template-collection .spr-form-input-textarea {
+  border-color: #e1e1e1;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+
+.product-stars .spr-badge-starrating .spr-icon {
+  font-size: 18px; }
+
+.tab-content .spr-container {
+  padding: 0;
+  border: none; }
+
+.spr-container {
+  padding: 0 !important;
+  border: 0 !important; }
+
+.template-product .spr-form-input-text, .template-product .spr-form-input-email, .template-product .spr-form-input-textarea, .template-collection .spr-form-input-text, .template-collection .spr-form-input-email, .template-collection .spr-form-input-textarea {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #e6e6e6; }

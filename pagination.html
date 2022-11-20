@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;600;800&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&family=PT+Serif&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600;700;800&family=Roboto:wght@700&family=Staatliches&display=swap');
+        
+        
+        
+        *, *::before, *::after {box-sizing: border-box;}
+        a {text-decoration: none;color: #000;}
+        html {font-size: 62.5%;}
+        svg {width: 20px;height: 20px;}
+        :root {
+            --smDis: 10px;
+            --mDis: 20px;
+            --lgDis: 30px;
+            --xlDis: 40px;
+            --mainColor1: #2a9d8f;
+            --mainColor2: #e76f51;
+            --subColor1: #DDD;
+            --subColor2: #888;
+            --subColor3: #264653;
+            --font1: 'Merriweather', serif;
+            --font2: 'Open Sans', sans-serif;
+            --fontSize1:4rem; --fontSize2:2.8rem;
+            --fontSize3:2.4rem; --fontSize4: 1.8rem
+        }
+        body, button, input {font-family: var(--font2);
+            font-size: var(--fontSize4);}
+        .padding-all {padding: var(--mDis);}
+        .reset-list {list-style: none;padding: 0;margin: 0;}
+        img, video, iframe {max-width: 100%;}
+        .max-container {max-width: 1140px;margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        body {margin: 0;padding: 0;}
+        del {color: var(--subColor2);}
+        .product-name {font-weight: 700 ;}
+        .btn-std {padding: var(--smDis) var(--mDis);
+            background-color: #FFF;text-align: center;border-radius: var(--smDis);
+            border: solid 1px var(--subColor2);
+            display: flex;justify-content: center;align-items: center;
+        }
+        .btn-square {width: 50px;height: 50px;background-color: #FFF;
+            border-radius: var(--smDis);border: solid 1px var(--subColor2);
+            display: flex;justify-content: center;align-items: center;
+        }
+        .btn-primary {background-color: var(--mainColor1);color: #FFF;
+            border-color: var(--mainColor1); fill: #FFF;
+        }
+
+        /* ........................ */
+        .shop-pagination ul {display: flex;justify-content: center;
+            gap: var(--lgDis); align-items: center;
+        }
+        .d-none {display: none;}
+        .cur-page {color: var(--mainColor2);}
+        .btn-disabled {color: var(--subColor1); border-color: var(--subColor1);
+            fill: var(--subColor1);
+        }
+
+
+        @media screen and (min-width:768px) {
+            .d-md-none {display: none !important;}
+            .d-md-block {display: block !important;}
+        } /*hết phần 768*/
+ 
+    </style>
+</head>
+<body>
+    <section class="shop-pagination padding-all max-container">
+        <ul class="reset-list">
+            <li><a href="" class="btn-square btn-disabled">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 6.0.0-beta2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
+            </a></li>
+            <li class="d-md-none">1/10</li>
+            <li class="d-none d-md-block"><a href="" class="cur-page">1</a></li>
+            <li class="d-none d-md-block"><a href="">2</a></li>
+            <li class="d-none d-md-block"><a href="">3</a></li>
+            <li class="d-none d-md-block"><a href="">4</a></li>
+            <li class="d-none d-md-block"><a href="">5</a></li>
+            <li class="d-none d-md-block"><a href="">6</a></li>
+
+
+            <li><a href="" class="btn-square">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 6.0.0-beta2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>
+            </a></li>
+        </ul>
+    </section>
+    
+
+    
+</body>
+</html>

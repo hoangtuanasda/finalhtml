@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;600;800&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&family=PT+Serif&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600;700;800&family=Roboto:wght@700&family=Staatliches&display=swap');
+        
+        
+        
+        *, *::before, *::after {box-sizing: border-box;}
+        a {text-decoration: none;color: #000;}
+        html {font-size: 62.5%;}
+        svg {width: 20px;height: 20px;}
+        :root {
+            --smDis: 10px;
+            --mDis: 20px;
+            --lgDis: 30px;
+            --xlDis: 40px;
+            --mainColor1: #2a9d8f;
+            --mainColor2: #e76f51;
+            --subColor1: #DDD;
+            --subColor2: #888;
+            --subColor3: #264653;
+            --font1: 'Merriweather', serif;
+            --font2: 'Open Sans', sans-serif;
+            --fontSize1:4rem; --fontSize2:2.8rem;
+            --fontSize3:2.4rem; --fontSize4: 1.8rem
+        }
+        body, button, input {font-family: var(--font2);
+            font-size: var(--fontSize4);}
+        .padding-all {padding: var(--mDis);}
+        .reset-list {list-style: none;padding: 0;margin: 0;}
+        img, video, iframe {max-width: 100%;}
+        .max-container {max-width: 1140px;margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        /* ........................ */
+        footer {background-color: var(--subColor3);color: #fff;}
+        footer a {color: #fff;}
+        footer p {margin-top: 0;}
+        footer .company-name a {font-weight: 700;}
+        footer .footer-menu {margin: var(--mDis) 0;}
+
+        .company-name {background-color: #25c34f;}
+        .social-links {background-color: #e76f51;}
+        .footer-menu {background-color: #4242d8;}
+        .company-info {background-color: #857575;}
+
+
+        @media screen and (min-width:768px) {
+            .footer-inner {display: flex;flex-wrap: wrap;}
+            .company-name, .footer-menu {width: 40%;}
+            .social-links, .company-info {width: 60%;}
+        } /*hết phần 768*/
+
+        @media screen and (min-width:992px) {
+            .company-name, .footer-menu {width: 60%;}
+            .social-links, .company-info {width: 40%;}
+        }
+
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="footer-inner max-container padding-all">
+            <div class="company-name">
+                <a href="index.html">Sáng tạo shop</a>
+                <p>Chuyên bán sản phẩm sáng tạo</p>
+            </div>
+            <ul class="reset-list social-links">
+                <li><a href="">face</a></li>
+                <li><a href="">ins</a></li>
+                <li><a href="">tw</a></li>
+            </ul>
+            <ul class="reset-list footer-menu">
+                <li><a href="">Cong nghe</a></li>
+                <li><a href="">Noi that</a></li>
+            </ul>
+            <div class="company-info">
+                <p>268 Cach mang thang 8</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

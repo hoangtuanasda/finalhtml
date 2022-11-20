@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Inter:wght@400;600;800&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&family=PT+Serif&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;600;700;800&family=Roboto:wght@700&family=Staatliches&display=swap');
+        
+        
+        
+        *, *::before, *::after {box-sizing: border-box;}
+        a {text-decoration: none;color: #000;}
+        html {font-size: 62.5%;}
+        svg {width: 20px;height: 20px;}
+        :root {
+            --smDis: 10px;
+            --mDis: 20px;
+            --lgDis: 30px;
+            --xlDis: 40px;
+            --mainColor1: #2a9d8f;
+            --mainColor2: #e76f51;
+            --subColor1: #DDD;
+            --subColor2: #888;
+            --subColor3: #264653;
+            --font1: 'Merriweather', serif;
+            --font2: 'Open Sans', sans-serif;
+            --fontSize1:4rem; --fontSize2:2.8rem;
+            --fontSize3:2.4rem; --fontSize4: 1.8rem
+        }
+        body, button, input {font-family: var(--font2);
+            font-size: var(--fontSize4);}
+        .padding-all {padding: var(--mDis);}
+        .reset-list {list-style: none;padding: 0;margin: 0;}
+        img, video, iframe {max-width: 100%;}
+        .max-container {max-width: 1140px;margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        body {margin: 0;padding: 0;}
+        del {color: var(--subColor2);}
+        .product-name {font-weight: 700 ;}
+        .btn-std {padding: var(--smDis) var(--mDis);
+            background-color: #FFF;text-align: center;border-radius: var(--smDis);
+            border: solid 1px var(--subColor2);
+            display: flex;justify-content: center;align-items: center;
+        }
+        .btn-square {width: 50px;height: 50px;background-color: #FFF;
+            border-radius: var(--smDis);border: solid 1px var(--subColor2);
+            display: flex;justify-content: center;align-items: center;
+        }
+        .btn-primary {background-color: var(--mainColor1);color: #FFF;
+            border-color: var(--mainColor1); fill: #FFF;
+        }
+
+        /* ........................ */
+        .section-heading {
+            font-family: var(--font1);font-size: var(--font2);
+            position: relative;display: flex;align-items: center;
+        }
+        .section-heading::before, .section-heading::after {content: "";
+            width: 6px;height: 30px;border-radius: 5px;
+            opacity: 0.5;transform: skew(-15deg);
+        }
+        .section-heading::before {
+            background-color: var(--mainColor1);margin-right: 20px;
+        }
+        .section-heading::after {
+            background-color: var(--mainColor2);
+            position: absolute; top: 50%;transform: translate(0,-50%) skew(-15deg);
+            left: 12px;
+        }
+ 
+    </style>
+</head>
+<body>
+    <section class="padding-all max-container">
+        <h1 class="section-heading">Section heading</h1>
+    </section>
+    
+
+    
+</body>
+</html>
